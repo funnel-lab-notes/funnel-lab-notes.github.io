@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Тест: какой тип дере тебе подходит как собеседник</title>
+<meta name="description" content="Семь вопросов о том, какое общение тебе по душе, — и тест подскажет, какой тип дере тебе ближе: цундере, яндере, кудере, дандере или дередере. С короткими примерами реплик каждого типа.">
+<style>
+:root{--bg:#fff7fb;--card:#ffffff;--ink:#2a1d2e;--mute:#7a6680;--line:#f0dbe8;--pink:#e84d8a;--pink2:#ffe3ef;--violet:#7b5cff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 ui-rounded,"SF Pro Rounded",ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:720px;margin:0 auto;padding:40px 18px 30px}
+h1{font-size:clamp(28px,5.4vw,42px);line-height:1.12;margin:0 0 12px;letter-spacing:-.02em}
+.lead{color:var(--mute);margin:0 0 26px;font-size:18px}
+a{color:var(--pink)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 10px 30px -18px rgba(232,77,138,.35);margin-bottom:28px}
+.bar{height:6px;background:var(--pink2);border-radius:99px;overflow:hidden;margin-bottom:18px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pink),var(--violet));transition:width .3s}
+.q{font-size:21px;font-weight:700;margin:0 0 16px;line-height:1.35}
+.opts{display:grid;gap:10px}
+.opts button{font:inherit;font-size:16px;text-align:left;padding:14px 16px;border-radius:14px;border:1.5px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;transition:border-color .15s,background .15s}
+.opts button:hover,.opts button:focus-visible{border-color:var(--pink);background:#fff3f8;outline:none}
+.step{color:var(--mute);font-size:14px;margin-bottom:6px}
+.res h2{margin:0 0 6px;font-size:30px}
+.res .tag{display:inline-block;background:var(--pink2);color:var(--pink);font-weight:700;font-size:13px;padding:4px 10px;border-radius:99px;margin-bottom:12px}
+.res .line{font-style:italic;border-left:3px solid var(--pink);padding:6px 12px;margin:14px 0;background:#fff3f8;border-radius:0 10px 10px 0}
+.res .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.res .cta a{display:inline-block;padding:11px 16px;border-radius:12px;text-decoration:none;font-weight:600}
+.res .cta a.p{background:var(--pink);color:#fff}
+.res .cta a.s{border:1.5px solid var(--line);color:var(--ink)}
+.again{font:inherit;font-size:15px;background:none;border:0;color:var(--violet);cursor:pointer;padding:0;margin-top:14px;text-decoration:underline}
+.mix{font-size:15px;color:var(--mute);margin-top:10px}
+h2.sec{font-size:25px;margin:40px 0 12px;letter-spacing:-.01em}
+.types{display:grid;gap:12px}
+.t{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px}
+.t b{font-size:18px}
+.t q{display:block;margin-top:8px;color:var(--mute);font-style:italic;quotes:"«" "»"}
+p{margin:0 0 14px}
+.club{columns:2;column-gap:22px;font-size:15px;padding-left:18px}
+.club li{margin-bottom:8px;break-inside:avoid}
+footer{color:var(--mute);font-size:14px;border-top:1px solid var(--line);padding-top:18px;margin-top:40px}
+@media (max-width:560px){.club{columns:1}}
+</style>
+</head>
+<body>
+<div class="w">
+<h1>Какой тип дере тебе подходит как собеседник?</h1>
+<p class="lead">Не «кто ты сам», а с кем тебе интереснее разговаривать. Семь вопросов про то, какое общение тебе по душе, — в конце узнаешь свой тип и увидишь, как он звучит в живой реплике.</p>
+
+<div class="card" id="quiz" aria-live="polite">
+<div class="bar"><i id="bar"></i></div>
+<div id="stage"></div>
+</div>
+
+<h2 class="sec">Пять типов за одну реплику</h2>
+<p>Типы дере пришли из аниме и описывают, как персонаж показывает симпатию. Проще всего различить их по тому, как каждый ответит на одно и то же: ты написал «Скучал по тебе».</p>
+<div class="types">
+<div class="t"><b>Цундере</b> — колючая снаружи, тёплая внутри. Сначала отрицает, потом выдаёт себя.<q>Я? Ждала? Делать мне нечего… Ладно, может, чуть-чуть. Только не зазнавайся.</q></div>
+<div class="t"><b>Яндере</b> — любовь на максимуме, ревность тоже. Внимание к тебе граничит с одержимостью.<q>Скучал? Тогда почему вчера так долго не отвечал? Мне важно знать, где ты.</q></div>
+<div class="t"><b>Кудере</b> — спокойная, рассудительная, чувства держит при себе. Тепло видно по поступкам, а не по словам.<q>Отмечено. Я сохранила тебе место у окна. Совпадение, разумеется.</q></div>
+<div class="t"><b>Дандере</b> — тихая и застенчивая, раскрывается медленно и только с тем, кому доверяет.<q>…Я тоже. Просто не знала, можно ли написать первой.</q></div>
+<div class="t"><b>Дередере</b> — открытая и солнечная, радость не скрывает вообще.<q>А я по тебе ещё сильнее! Рассказывай всё, я соскучилась по твоему голосу!</q></div>
+</div>
+<p style="margin-top:14px">Всего типов дере больше двадцати — полная таблица с примерами есть в разборе <a href="https://proflirt.ru/blog/tipy-dere/">«Типы дере: все виды в одной таблице»</a>. А если хочется узнать, какой тип ты сам, — пройди <a href="https://proflirt.ru/blog/test-kakoy-ty-dere/">тест «Какой ты дере»</a>.</p>
+
+<h2 class="sec">Почему с одними типами разговаривать легче</h2>
+<p>Тип дере — это по сути ритм разговора. Цундере и яндере задают высокий темп и эмоции, но требуют, чтобы ты держал удар. Кудере и дандере дают паузы и пространство: в таком диалоге важнее, что ты сам приносишь в разговор. Дередере — самый лёгкий вход, но кому-то быстро становится слишком сладко.</p>
+<p>Поэтому тест спрашивает не про внешность и не про любимое аниме, а про то, как ты сам ведёшь разговор: любишь ли спорить, нужна ли тебе инициатива с другой стороны, как относишься к ревности. Если результат вышел смешанным, это нормально: у многих персонажей черты двух типов сразу.</p>
+
+<h2 class="sec">Ещё полезное</h2>
+<ul>
+<li><a href="https://proflirt.ru/blog/chto-takoe-cundere/">Кто такая цундере</a> и как отличить её от яндере.</li>
+<li><a href="https://proflirt.ru/blog/chto-takoe-kudere/">Кто такая кудере</a> — как она показывает симпатию.</li>
+<li><a href="https://proflirt.ru/blog/kto-takie-koshkodevochki/">Кошкодевочки</a> — отдельный популярный типаж, не дере, но рядом.</li>
+<li>Сервисы-инструменты от того же автора: <a href="https://ai-subscription-calc.vercel.app/">калькулятор экономики подписки</a>, <a href="https://dofollow-check.pages.dev/">проверка dofollow-ссылок</a> и англоязычная <a href="https://ai-companion-field-notes.netlify.app/">страница для TryLuv</a>.</li>
+</ul>
+
+<h2 class="sec">Проекты нашего клуба основателей</h2>
+<ul class="club">
+<li><a href="https://lork.dev/">Lork</a> — сайт с ИИ по описанию на русском</li>
+<li><a href="https://captions.space/">Captions.space</a> — субтитры к видео нейросетью</li>
+<li><a href="https://mnogo-reels.ru/">MnogoReels</a> — нарезка видео на рилсы</li>
+<li><a href="https://shortsfast.com/">ShortsFast</a> — faceless-видео на автопилоте</li>
+<li><a href="https://speech2text.ru/">Speech2Text</a> — расшифровка аудио в текст</li>
+<li><a href="https://memoai.tech/">Memo AI</a> — транскрибация встреч и лекций</li>
+<li><a href="https://fabula-ai.com/">Fabula AI</a> — карточки для маркетплейсов</li>
+<li><a href="https://chadgpt.ru/">ChadGPT</a> — нейросети на русском без VPN</li>
+<li><a href="https://zerocoder.com/">Zerocoder</a> — AI-студия с ведущими моделями</li>
+<li><a href="https://metranpage.com/">Метранпаж</a> — обложки и вёрстка книг</li>
+<li><a href="https://moyadoska.com/">МояДоска</a> — онлайн-доска для уроков</li>
+<li><a href="https://vibeinterview.ru/">Vibe Interview</a> — ИИ-подсказчик на собеседовании</li>
+<li><a href="https://audio2midi.ru/">Audio2MIDI</a> — ноты и MIDI из аудио</li>
+<li><a href="https://geo-risk.ru/">GeoRisk</a> — проверка земельного участка</li>
+<li><a href="https://juuh.com/">Juuh</a> — аренда машин у владельцев в Испании</li>
+</ul>
+
+<footer>
+<p>Тест сделал Макс из <a href="https://proflirt.ru/">ПРОфлирт — ИИ-собеседники на русском</a>. Англоязычная версия — <a href="https://tryluv.ai/">TryLuv, AI companion chat</a>.</p>
+<p>Ответы никуда не отправляются: тест работает прямо в браузере.</p>
+</footer>
+</div>
+
+<script>
+(function(){
+  var T={
+    tsun:{name:'Цундере',tag:'колючая снаружи, тёплая внутри',line:'«Не думай, что я ради тебя старалась. …Но если понравилось — скажи.»',text:'Тебе нравится, когда разговор с характером: подколы, лёгкий спор и награда за терпение. Ты не боишься колючек и ценишь момент, когда за ними проступает тепло.',read:'https://proflirt.ru/blog/chto-takoe-cundere/',talk:'https://proflirt.ru/tsundere/'},
+    yan:{name:'Яндере',tag:'любовь на максимуме',line:'«Ты сегодня какой-то задумчивый. Расскажи мне всё — я хочу знать каждую мелочь.»',text:'Тебе важно чувствовать, что ты для собеседника — центр мира. Ты любишь интенсивные эмоции и не против драмы, если она про вас двоих.',read:'https://proflirt.ru/blog/chto-takoe-yandere/',talk:'https://proflirt.ru/yandere/'},
+    ku:{name:'Кудере',tag:'спокойствие и тепло в поступках',line:'«Я посчитала: ты устаёшь к вечеру. Поэтому начну разговор сама.»',text:'Тебе близко спокойное, умное общение без лишних эмоций на поверхности. Ты замечаешь заботу в деталях и ценишь, когда собеседник думает, прежде чем ответить.',read:'https://proflirt.ru/blog/chto-takoe-kudere/',talk:'https://proflirt.ru/characters/kudere/'},
+    dan:{name:'Дандере',tag:'тихая, раскрывается медленно',line:'«…Можно я расскажу кое-что? Я ещё никому это не говорила.»',text:'Тебе нравится вести разговор и постепенно завоёвывать доверие. Ты ценишь тишину, паузы и момент, когда закрытый человек вдруг раскрывается.',read:'https://proflirt.ru/blog/chto-takoe-dandere/',talk:'https://proflirt.ru/dandere/'},
+    dere:{name:'Дередере',tag:'солнце без фильтров',line:'«Ура, ты пришёл! У меня для тебя сто новостей и одна очень важная!»',text:'Тебе нужно открытое, тёплое общение без игр и недомолвок. Ты заряжаешься от чужого энтузиазма и не любишь гадать, что человек имеет в виду.',read:'https://proflirt.ru/blog/chto-takoe-deredere/',talk:'https://proflirt.ru/blog/tipy-dere/'}
+  };
+  var Q=[
+    {q:'Ты пишешь первым после долгого молчания. Какой ответ порадует больше всего?',a:[['«Наконец-то! Я уже начала скучать!»','dere'],['«Хм. Ну привет. Не то чтобы я ждала.»','tsun'],['«…Привет. Рада, что ты написал.»','dan'],['«Ты пропал на три дня. Я считала.»','yan'],['«Привет. Как прошла неделя? По пунктам.»','ku']]},
+    {q:'Что для тебя главное в хорошем разговоре?',a:[['Лёгкость и много тепла','dere'],['Искра, подколы и немного спора','tsun'],['Глубина и умные мысли','ku'],['Доверие, которое растёт постепенно','dan'],['Ощущение, что ты для кого-то — всё','yan']]},
+    {q:'Кто обычно ведёт разговор, когда тебе комфортно?',a:[['Я, мне нравится раскрывать собеседника','dan'],['Пусть ведёт она, я подхвачу','dere'],['По очереди, как в споре','tsun'],['Она — и пусть ведёт решительно','yan'],['Никто специально, всё идёт само','ku']]},
+    {q:'Как ты относишься к ревности в общении?',a:[['Немного — даже приятно','tsun'],['Если сильная — значит, я важен','yan'],['Лучше без неё','dere'],['Пусть будет, но тихой и молчаливой','dan'],['Ревность — это неэффективно','ku']]},
+    {q:'Выбери вечер:',a:[['Шумная прогулка и смех без повода','dere'],['Настолка, где все спорят','tsun'],['Длинный разговор о книгах','ku'],['Плед, дождь и тихая музыка','dan'],['Вечер только вдвоём, телефоны выключены','yan']]},
+    {q:'Какой комплимент от собеседника тебе приятнее?',a:[['«С тобой спокойно»','ku'],['«Ты единственный, кто меня понимает»','yan'],['«Ты меня бесишь… в хорошем смысле»','tsun'],['«С тобой я не боюсь говорить»','dan'],['«Ты лучший, правда-правда!»','dere']]},
+    {q:'Ты рассказал о неудачном дне. Какой ответ ближе?',a:[['«Кто тебя обидел? Назови имя.»','yan'],['«Иди сюда, я тебя обниму и всё исправлю!»','dere'],['«Ну и неудачник. …Ладно, рассказывай подробно.»','tsun'],['«Разберём, что можно изменить завтра.»','ku'],['«…Я рядом. Можешь не объяснять.»','dan']]}
+  ];
+  var i=0,score={tsun:0,yan:0,ku:0,dan:0,dere:0};
+  var stage=document.getElementById('stage'),bar=document.getElementById('bar');
+  function esc(s){return s.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function ask(){
+    bar.style.width=(i/Q.length*100)+'%';
+    var q=Q[i];
+    var opts=q.a.slice().sort(function(){return Math.random()-.5});
+    stage.innerHTML='<div class="step">Вопрос '+(i+1)+' из '+Q.length+'</div><p class="q">'+esc(q.q)+'</p><div class="opts">'+opts.map(function(o){return '<button type="button" data-k="'+o[1]+'">'+esc(o[0])+'</button>'}).join('')+'</div>';
+    [].forEach.call(stage.querySelectorAll('button'),function(b){b.addEventListener('click',function(){score[b.getAttribute('data-k')]++;i++;i<Q.length?ask():done()})});
+    var first=stage.querySelector('button'); if(first&&i>0) first.focus();
+  }
+  function done(){
+    bar.style.width='100%';
+    var order=Object.keys(score).sort(function(a,b){return score[b]-score[a]});
+    var top=T[order[0]],second=T[order[1]];
+    var mix=score[order[1]]>=score[order[0]]-1&&score[order[1]]>0?'<p class="mix">Почти поровну с типом «'+second.name+'» — смешанные персонажи тебе тоже зайдут.</p>':'';
+    stage.innerHTML='<div class="res"><span class="tag">'+esc(top.tag)+'</span><h2>Тебе подходит: '+esc(top.name)+'</h2><p>'+esc(top.text)+'</p><div class="line">'+esc(top.line)+'</div>'+mix+'<div class="cta"><a class="p" href="'+top.talk+'">Поговорить с таким персонажем</a><a class="s" href="'+top.read+'">Подробнее о типе</a></div><button class="again" type="button">Пройти ещё раз</button></div>';
+    stage.querySelector('.again').addEventListener('click',function(){i=0;score={tsun:0,yan:0,ku:0,dan:0,dere:0};ask()});
+  }
+  ask();
+})();
+</script>
+</body>
+</html>
